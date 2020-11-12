@@ -8,30 +8,30 @@
   * Windows: [Install for Windows](https://hub.docker.com/editions/community/docker-ce-desktop-windows/)
   * Linux: [Install Docker for Linux](https://docs.docker.com/engine/install/ubuntu/) & [Install Docker Compose](https://docs.docker.com/compose/install/)
 
+### Automated
+
 ## 1: Get Source
 
 `git clone https://github.com/sincereleeshaun/covid-update`
 
-## 2: Change Country of interest
+## 2: Make changes to API
 
-modify source url with desired country_name in get_update.js file
+Alter or add changes to your API for additional functions
 
-`https://api.covid19api.com/total/country/country_name/status/confirmed`
+## 3: Push Code to GitHUB
 
-## 3: Build Container
+In your local repository, push code:
 
+`git add .`
+`git commit -m "<change description>"`
+`git push`
 
+## 4: GitHub Actions will Build & Run the Docker Container
 
-## 3: Build Container
+Sit back and relax! Let GitHub do the work!
 
-`docker build -t <IMAGE_ID>:<VERSION_NUMBER> .`  (replace IMAGE_ID and VERSION_NUMBER)
+## 5: Output is pushed to Dockerhub (WIP)
 
-## 4: Push to Dockerhub
+expected output should look something like this if the country chosen is "Singapore" and date is "2020-11-11"
 
-`docker login`
-
-`docker push <YOUR_USERNAME>/singapore_status_update:<VERSION_NUMBER>`
-
-## 5: Run Container
-
-`docker run -d -p 8080:8080 <YOUR_USERNAME>/singapore_status_update`
+`"Total Cases as of 2020-11-11: 58091"`
