@@ -25,10 +25,10 @@ jobs:
       run: docker build -t covid_update .
 
     - name: Run Docker Container 
-      run: docker run -d -p 0.0.0.0:8080:8080/tcp covid_update 
+      run: docker run -d -p 8080:8080/tcp covid_update 
 
     - name: Troubleshooting
-      run: docker network ls -q | xargs docker network inspect
+      run: docker exec -d covid_update awk 'END{print $1}' /etc/hosts
 
     - name: Call API
       uses: wei/curl@master
