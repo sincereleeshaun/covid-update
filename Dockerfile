@@ -10,6 +10,7 @@ RUN apt-get install sudo
 ENV USER root
 RUN npm install -g express-generator
 RUN npm install express --save
+RUN npm install request
 RUN useradd -ms /bin/bash user
 COPY get_update.js /home/user/get_update.js
 COPY start.sh /home/user/start.sh

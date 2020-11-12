@@ -10,11 +10,17 @@
 
 ## 1: Get Source
 
-`git clone https://github.com/sincereleeshaun/Covid-update-test`
+`git clone https://github.com/sincereleeshaun/covid-update`
 
-## 2: Select Country of interest
+## 2: Change Country of interest
 
-modify source url with desired country
+modify source url with desired country_name in get_update.js file
+
+`https://api.covid19api.com/total/country/country_name/status/confirmed`
+
+## 3: Build Container
+
+
 
 ## 3: Build Container
 
@@ -29,7 +35,3 @@ modify source url with desired country
 ## 5: Run Container
 
 `docker run -d -p 8080:8080 <YOUR_USERNAME>/singapore_status_update`
-
-## Workflow Draft
-1. 
-2.

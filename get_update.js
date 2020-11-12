@@ -5,10 +5,10 @@ app.listen(8000, () => {
  console.log("Server running on port 8080");
 });
 
-app.get("/total", (req, res, next) => {
+app.get("/total/:country", (req, res, next) => {
     var options = {
         'method': 'GET',
-        'url': 'https://api.covid19api.com/total/country/singapore/status/confirmed',
+        'url': 'https://api.covid19api.com/total/country/${request.params.country}/status/confirmed',
         'headers': {
         }
       };
