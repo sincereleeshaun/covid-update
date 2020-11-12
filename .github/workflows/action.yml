@@ -27,6 +27,9 @@ jobs:
     - name: Run Docker Container 
       run: docker run -d -p 0.0.0.0:8080:8080/tcp covid_update 
 
+    - name: Troubleshooting
+      run: docker network ls -q | xargs docker network inspect
+
     - name: Call API
       uses: wei/curl@master
       with:
