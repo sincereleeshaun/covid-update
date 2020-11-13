@@ -6,7 +6,6 @@ app.listen(8080, () => {
 });
 
 app.get("/total/:country", (req, res, next) => {
-  console.log(`test ${req.params.country}`)
     var options = {
         'method': 'GET',
         'url': `https://api.covid19api.com/total/country/${req.params.country}/status/confirmed`,
