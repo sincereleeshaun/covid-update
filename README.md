@@ -30,7 +30,7 @@ In your local repository, push code:
 
 Sit back and relax! Let GitHub do the work!
 
-## 5: Output is pushed to Dockerhub (WIP)
+## 5: Docker image is pushed to Dockerhub (WIP)
 
 expected output should look something like this if the country chosen is "Singapore" and date is "2020-11-11"
 
